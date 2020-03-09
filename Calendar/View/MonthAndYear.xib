@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MonthAndYear" customModule="Calendar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnP-Qf-hO8">
+                    <rect key="frame" x="16" y="60" width="12.5" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" image="chevron.left" catalog="system"/>
+                    <connections>
+                        <action selector="prevButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dr0-si-WvB"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlO-1t-Cc6">
+                    <rect key="frame" x="189" y="65" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-vX-inU">
+                    <rect key="frame" x="391.5" y="60" width="12.5" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" image="chevron.right" catalog="system"/>
+                    <connections>
+                        <action selector="nextButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ssb-OM-XFz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nnP-Qf-hO8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1H1-rr-GAf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="R4w-vX-inU" secondAttribute="trailing" constant="16" id="bRY-gQ-ZWT"/>
+                <constraint firstItem="OlO-1t-Cc6" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="fBk-t6-Etp"/>
+                <constraint firstItem="nnP-Qf-hO8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ga1-Y0-1F1"/>
+                <constraint firstItem="R4w-vX-inU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="ggZ-ml-iuP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OlO-1t-Cc6" secondAttribute="bottom" constant="30" id="i5Y-a4-pVr"/>
+                <constraint firstItem="OlO-1t-Cc6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="21" id="o4b-hI-r47"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="monthOrYearLabel" destination="OlO-1t-Cc6" id="uve-fm-Se9"/>
+            </connections>
+            <point key="canvasLocation" x="78.260869565217391" y="214.95535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
+    </resources>
+</document>

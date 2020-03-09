@@ -1,0 +1,20 @@
+{
+  "reminders": [{
+    "day": 3,
+    "month": 3,
+    "year": 2020,
+    "events": ["reminder","fd"]
+  },
+  {
+    "day": 3,
+    "month": 4,
+    "year": 2020,
+    "events": ["abc","fdshaf"]
+  },
+  {
+    "day": 25,
+    "month": 3,
+    "year": 2020,
+    "events": ["abc","birthday"]
+  }]
+}
